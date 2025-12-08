@@ -8,10 +8,12 @@ in
    ./hardware-configuration.nix
    ./bases/cli
    ./bases/desktop
+   ./bases/dev
    ./bases/keyboard
    ./bases/terminal
    ./components/flatpak
    ./components/distrobox
+   ./components/obsidian
  ];
 
  # Bootloader.

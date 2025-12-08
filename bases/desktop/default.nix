@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
-
 {
-  imports = [
-    ../../components/hyprland
-    # ../../components/kde
-    # ../../components/gnome
+ imports = [
+   # Window manager
+   # ../../components/hyprland
+   # ../../components/kde
+   ../../components/gnome
   ];
-}
+ }

@@ -4,10 +4,7 @@
  inputs = {
    # Nixpkgs
    nixpkgs.url = "nixpkgs/master";
-   
-   # Home manager
-   home-manager.url = "github:nix-community/home-manager/master";
-   home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
  };
  
  outputs = {
@@ -25,13 +22,6 @@
        system = const.system;
        specialArgs = {inherit inputs;};
        modules = [./configuration.nix];
-     };
-   };
-   
-   homeConfigurations = {
-     user-host = home-manager.lib.homeManagerConfiguration {
-       inherit pkg;
-       modules = [./home.nix];      
      };
    };
  };

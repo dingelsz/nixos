@@ -8,13 +8,6 @@
 
     programs.rofi.theme = "~/.config/rofi/theme.rasi";
 
-
-    # home.file.".config/rofi/config.rasi" = {
-    #   text = ''
-    #     @theme "/home/zach/.config/rofi/theme.rasi"
-    #   '';
-    # };
-
     home.file.".config/rofi/theme.rasi" = {
       source = ./theme.rasi;
     };

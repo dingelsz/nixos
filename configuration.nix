@@ -10,6 +10,7 @@ in
    ./bases/keyboard
    ./bases/terminal
    ./components/flatpak
+   ./components/distrobox
  ];
 
  # Bootloader.

@@ -1,13 +1,10 @@
-{config,...}:
+{pkgs, ...}:
 
 {
-    programs.git = {
-    enable = true;
-    user = {
-      name  = "anon";
-      email = "anon@anon.com";
-    };
-  };
+  environment.systemPackages = with pkgs; 
+    [
+      git
+    ];
 }
 
   

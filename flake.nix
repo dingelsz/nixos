@@ -1,16 +1,16 @@
 {
  description = "test";
+ inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
  inputs = {
    # Nixpkgs
    nixpkgs.url = "nixpkgs/master";
-
  };
  
  outputs = {
    self,
      nixpkgs,
-     home-manager,
+     nixos-hardware,
      ...
  } @ inputs: let
    const = import ./constants.nix;
@@ -21,7 +21,10 @@
      nixos = nixpkgs.lib.nixosSystem {
        system = const.system;
        specialArgs = {inherit inputs;};
-       modules = [./configuration.nix];
+       modules = [
+         nixos-hardware.nixosModules.framework-13-7040-amd
+         ./configuration.nix
+       ];
      };
    };
  };

@@ -1,10 +1,13 @@
 { config, pkgs, ... }:
 
+let
+  const = import ./constants.nix;
+in
 {
-  home.stateVersion = "25.11";
+ home.stateVersion = const.versions.home;
   
-  home.username = "zach";
-  home.homeDirectory = "/home/zach";
+ home.username = const.username;
+ home.homeDirectory = "/home/${const.username}";
 
-  programs.home-manager.enable = true;
-}
+ programs.home-manager.enable = true;
+ }

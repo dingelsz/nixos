@@ -12,6 +12,7 @@ in
    ./bases/keyboard
    ./bases/terminal
    ./components/flatpak
+   ./components/git
    ./components/distrobox
    ./components/obsidian
  ];
@@ -79,7 +80,6 @@ in
  nixpkgs.config.allowUnfree = true;
 
  environment.systemPackages = with pkgs; [
-   git
    emacs-nox
  ];
 

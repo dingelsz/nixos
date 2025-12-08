@@ -9,6 +9,7 @@ in
    ./bases/desktop
    ./bases/keyboard
    ./bases/terminal
+   ./components/flatpak
  ];
 
  # Bootloader.
@@ -64,7 +65,6 @@ in
    description = const.username;
    extraGroups = [ "networkmanager" "wheel" ];
    packages = with pkgs; [
-     flatpak
    ];
  };
 

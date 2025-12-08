@@ -6,6 +6,7 @@ in
 {
  imports = [
    ./hardware-configuration.nix
+   ./bases/cli
    ./bases/desktop
    ./bases/keyboard
    ./bases/terminal

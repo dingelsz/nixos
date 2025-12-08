@@ -6,8 +6,9 @@ in
 {
  imports = [
    ./hardware-configuration.nix
-  ./bases/window-manager
-  ./bases/keyboard
+   ./bases/desktop
+   ./bases/keyboard
+   ./bases/terminal
  ];
 
  # Bootloader.

@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 
 {
   # Enable the GNOME Desktop Environment.
@@ -7,7 +7,8 @@
 
   # Packages
   environment.systemPackages = with pkgs; [
-    gnome.gnome-tweaks
+    gnome-tweaks
+    gnome-software
   ];
 
   # Dconf Settings

@@ -64,6 +64,7 @@ in
    description = const.username;
    extraGroups = [ "networkmanager" "wheel" ];
    packages = with pkgs; [
+     flatpak
    ];
  };
 

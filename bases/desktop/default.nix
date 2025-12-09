@@ -2,7 +2,8 @@
 {
  imports = [
    # Window manager
-   ../../components/hyprland
+   # ../../components/hyprland
+   ../../components/niri
    # ../../components/kde
    # ../../components/gnome
   ];

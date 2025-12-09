@@ -7,7 +7,14 @@
 
   # Packages
   environment.systemPackages = with pkgs; [
-    ashell # status bar
+    # Status Bars
+    # ashell
+    waybar
+
+    # Launcher
     rofi
+
+    # Wallpaper
+    swaybg
   ];
 }

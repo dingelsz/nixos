@@ -8,7 +8,6 @@
   # Packages
   environment.systemPackages = with pkgs; [
     # Status Bars
-    # ashell
     waybar
 
     # Launcher

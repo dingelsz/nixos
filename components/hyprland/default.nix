@@ -7,13 +7,12 @@
 
   # Packages
   environment.systemPackages = with pkgs; [
-    # Status Bars
-    waybar
-    # Launcher
-    rofi
-    # Wallpaper
-    swaybg
-    # Cursor
-    apple-cursor
+    hypr    
+    waybar       # status bar
+    rofi         # launcher
+    swaybg       # wallpaper
+    apple-cursor # cursor
+    hypridle     # idle manager
+    hyprlock     # lockscreen
   ];
 }

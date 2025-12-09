@@ -11,6 +11,7 @@ in
    ./bases/desktop
    ./bases/dev
    ./bases/file-manager
+   ./bases/fonts
    ./bases/keyboard
    ./bases/terminal
    ./components/flatpak

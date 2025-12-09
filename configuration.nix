@@ -6,7 +6,7 @@ in
 {
  imports = [
    ./hardware-configuration.nix
-   ./bases/brave
+   ./bases/browser
    ./bases/cli
    ./bases/desktop
    ./bases/dev

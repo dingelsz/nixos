@@ -6,6 +6,7 @@ in
 {
  imports = [
    ./hardware-configuration.nix
+   ./bases/brave
    ./bases/cli
    ./bases/desktop
    ./bases/dev
@@ -72,12 +73,8 @@ in
    ];
  };
 
- # Install firefox.
- programs.firefox.enable = true;
-
  # Allow unfree packages
  nixpkgs.config.allowUnfree = true;
-
  environment.systemPackages = with pkgs; [
    git
    emacs-nox

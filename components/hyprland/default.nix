@@ -4,15 +4,15 @@
   programs.hyprland = {
     enable = true;
   };
-
+  imports = [
+    ../rofi # launcher
+  ];
   # Packages
   environment.systemPackages = with pkgs; [
     hypr    
     waybar       # status bar
-    rofi         # launcher
     swaybg       # wallpaper
     apple-cursor # cursor
-    hypridle     # idle manager
     hyprlock     # lockscreen
   ];
 }

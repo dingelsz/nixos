@@ -1,20 +1,37 @@
+{ pkgs, ...}:
+
+let
+   desktop-lock = pkgs.makeDesktopItem
+   {
+     name = "Power: Lock";
+     desktopName = "Power: Lock";
+     exec = "hyprlock";
+   };
+   desktop-logout = pkgs.makeDesktopItem
+   {
+     name = "Power: Logout";
+     desktopName = "Power: Logout";
+     exec = "hyprctl dispatch exit";
+   };
+   desktop-reboot = pkgs.makeDesktopItem
+   {
+     name = "Power: Reboot";
+     desktopName = "Power: Reboot";
+     exec = "reboot";
+   };
+   desktop-shutdown = pkgs.makeDesktopItem
+   {
+     name = "Power: Off";
+     desktopName = "Power: Off";
+     exec = "shutdown now";
+   };
+in
 {
-  config,
-  ...
-}: {
-    programs.rofi = {
-      enable = true;
-    };
-
-    programs.rofi.theme = "~/.config/rofi/theme.rasi";
-
-    home.file.".config/rofi/theme.rasi" = {
-      source = ./theme.rasi;
-    };
-
-    home.file.".config/hypr/per-app/rofi.conf" = {
-      text = ''
-	bind = $mainMod, SPACE, exec, rofi -show drun -show-icons
-      '';
-    };
+  environment.systemPackages = with pkgs; [
+    rofi
+    desktop-lock
+    desktop-logout
+    desktop-reboot
+    desktop-shutdown
+  ];
 }

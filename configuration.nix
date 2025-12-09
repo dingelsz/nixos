@@ -6,6 +6,7 @@ in
 {
  imports = [
    ./hardware-configuration.nix
+   ./bases/bluetooth
    ./bases/browser
    ./bases/cli
    ./bases/desktop

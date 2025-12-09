@@ -10,6 +10,7 @@ in
    ./bases/cli
    ./bases/desktop
    ./bases/dev
+   ./bases/file-manager
    ./bases/keyboard
    ./bases/terminal
    ./components/flatpak

@@ -1,5 +1,5 @@
 {
- description = "test";
+ description = "A framework system";
  inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
  inputs = {
@@ -9,21 +9,32 @@
  
  outputs = {
    self,
-     nixpkgs,
-     nixos-hardware,
-     ...
+   nixpkgs,
+   nixos-hardware,
+   ...
  } @ inputs: let
-   const = import ./constants.nix;
-   user-host = "${const.username}@${const.hostname}";
-   pkg = nixpkgs.legacyPackages.${const.system};
+   system = "x86_64-linux";
+   pkg = nixpkgs.legacyPackages.${system};
  in {
    nixosConfigurations = {
      nixos = nixpkgs.lib.nixosSystem {
-       system = const.system;
        specialArgs = {inherit inputs;};
        modules = [
          nixos-hardware.nixosModules.framework-13-7040-amd
-         ./configuration.nix
+         ./systems/framework/configuration.nix
+         ./systems/framework/hardware-configuration.nix
+         ./bases/bluetooth
+         ./bases/browser
+         ./bases/cli
+         ./bases/desktop
+         ./bases/dev
+         ./bases/file-manager
+         ./bases/fonts
+         ./bases/keyboard
+         ./bases/terminal
+         ./components/flatpak
+         ./components/distrobox
+         ./components/obsidian
        ];
      };
    };

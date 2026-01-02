@@ -31,6 +31,7 @@
          ./bases/file-manager
          ./bases/fonts
          ./bases/keyboard
+         ./bases/python
          ./bases/terminal
          ./components/flatpak
          ./components/distrobox

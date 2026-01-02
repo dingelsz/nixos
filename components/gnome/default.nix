@@ -9,6 +9,7 @@
   environment.systemPackages = with pkgs; [
     gnome-tweaks
     gnome-software
+    librewolf
     wofi
   ];
 

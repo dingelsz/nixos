@@ -3,5 +3,6 @@
 {
  imports = [
    ../../components/clojure
+   ../../components/zig
  ];
 }

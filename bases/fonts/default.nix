@@ -1,5 +1,8 @@
 { lib, config, pkgs, ... }:
 
 {
-  fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+  fonts.packages = with pkgs; [
+    nerd-fonts.roboto-mono
+    nerd-fonts.fira-code
+  ];
 }

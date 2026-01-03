@@ -11,6 +11,7 @@
     gnome-software
     librewolf
     wofi
+    emacs
   ];
 
   # Dconf Settings

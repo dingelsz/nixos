@@ -8,7 +8,7 @@
       scipy # probably redundant to pandas
       jupyterlab
       pandas
-      scikitlearn
+      scikit-learn
     ]))];
 }
 

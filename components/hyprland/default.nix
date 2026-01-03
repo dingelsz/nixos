@@ -14,5 +14,7 @@
     swaybg       # wallpaper
     apple-cursor # cursor
     hyprlock     # lockscreen
+    overskride   # Bluetooth Manager
+    nmgui        # WiFi/Network Manager
   ];
 }

@@ -6,5 +6,7 @@
    # ../../components/niri
    # ../../components/kde
    # ../../components/gnome
+   # Apps
+   ../../components/emacs
   ];
  }

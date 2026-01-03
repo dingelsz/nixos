@@ -14,7 +14,9 @@
     swaybg       # wallpaper
     apple-cursor # cursor
     hyprlock     # lockscreen
-    overskride   # Bluetooth Manager
-    nmgui        # WiFi/Network Manager
+    adw-bluetooth   # Bluetooth Manager
+        adwaita-icon-theme # dependency
+    bluetui
+        nmgui        # WiFi/Network Manager
   ];
 }

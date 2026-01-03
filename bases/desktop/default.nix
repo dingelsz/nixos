@@ -8,5 +8,10 @@
    # ../../components/gnome
    # Apps
    ../../components/emacs
+   # 
+   
+  ];
+   environment.systemPackages = [
+     pkgs.brightnessctl
   ];
  }
